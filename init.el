@@ -58,7 +58,7 @@
 ;; Window system specific configurations
 (when window-system
   ;; font size
-  (set-face-attribute 'default nil :font "Droid Sans Mono for Powerline" :height 150)
+  (set-face-attribute 'default nil :font "Droid Sans Mono" :height 150)
   (server-start))
 
 ;; (eshell)
