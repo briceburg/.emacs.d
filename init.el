@@ -15,7 +15,8 @@
 (defvar my-packages '(starter-kit starter-kit-lisp starter-kit-eshell
                                   starter-kit-js starter-kit-bindings
                                   clojure-mode clojure-test-mode nrepl
-                                  projectile rainbow-delimiters rainbow-mode)
+                                  projectile rainbow-delimiters rainbow-mode
+                                  auto-complete)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
@@ -131,3 +132,7 @@ Display the results in a hyperlinked *compilation* buffer."
   (compile (concat "lein kibit " buffer-file-name)))
 
 (remove-hook 'prog-mode-hook 'esk-turn-on-hl-line-mode)
+
+;; autocomplete rules
+(require 'auto-complete)
+(global-auto-complete-mode t)
