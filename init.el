@@ -131,7 +131,11 @@ Display the results in a hyperlinked *compilation* buffer."
   (interactive)
   (compile (concat "lein kibit " buffer-file-name)))
 
-(remove-hook 'prog-mode-hook 'esk-turn-on-hl-line-mode)
+;; highlight mode
+;; for customizing see;
+;; http://www.gnu.org/savannah-checkouts/gnu/emacs/manual/html_node/elisp/Face-Attributes.html
+(global-hl-line-mode 1)
+(set-face-attribute hl-line-face nil :underline nil)
 
 ;; autocomplete rules
 (require 'auto-complete)
