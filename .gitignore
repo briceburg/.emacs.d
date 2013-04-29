@@ -10,3 +10,6 @@ url
 ido.last
 recentf
 var/
+/backups
+/ac-comphist.dat
+/auto-save-list
